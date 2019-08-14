@@ -40,7 +40,7 @@ html += html_male
 part1 = MIMEBase('application',"octet-stream")
 part1.set_payload(open("C:/Users/Desktop/ChoyChoy/New_Subscribers.xlsx", "rb").read())
 encoders.encode_base64(part1)
-part1.add_header('Content-Disposition','attachment;filename='Subsribers.xlsx')
+part1.add_header('Content-Disposition','attachment; filename="Subscribers.xlsx"')
 
 #mime the html string
 part2 = MIMEText(html.encode('utf-8'),'html','utf-8')
