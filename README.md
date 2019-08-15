@@ -72,10 +72,9 @@ msg['X-MSMail-Priority'] = 'High'
 ```
 ### Step 10: Connect to smtp server
 ```
-context = ssl.create_default_context()
 s = smtplib.SMTP("smtp.office365.com",587)
 s.ehlo()
-s.starttls(context=context)
+s.starttls()
 s.ehlo()
 ```
 ### Step 11: Start to log in and send out the email
